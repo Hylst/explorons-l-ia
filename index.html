@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explorons l'IA — Guide complet sur l'intelligence artificielle</title>
+    <meta name="description" content="Explorez les fondements, les applications et l'avenir de l'intelligence artificielle à travers un guide complet et accessible en français." />
+    <meta name="author" content="Geoffroy Streit" />
+
+    <meta property="og:title" content="Explorons l'IA — Guide complet sur l'intelligence artificielle" />
+    <meta property="og:description" content="Explorez les fondements, les applications et l'avenir de l'intelligence artificielle à travers un guide complet et accessible en français." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/pics/ia_explorer.jpg" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@hylst" />
+    <meta name="twitter:image" content="/pics/ia_explorer.jpg" />
+    <link rel="icon" href="/logo-192.png" type="image/png" />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <link rel="mask-icon" href="/logo.svg" color="#7c3aed" />
+    
+    <!-- PWA manifest -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#7c3aed">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Explorons l'IA">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+    <script type="module" src="/src/main.tsx"></script>
+    <!-- PWA Service Worker -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then(registration => console.log('SW registered: ', registration))
+            .catch(registrationError => console.log('SW registration failed: ', registrationError));
+        });
+      }
+    </script>
+  </body>
+</html>

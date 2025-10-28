@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" aria-label="IA Explorer Logo" role="img">
+  <defs>
+    <linearGradient id="aiGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#fb923c"/>
+    </linearGradient>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="64" cy="64" r="60" fill="#0f0f23"/>
+  <circle cx="64" cy="64" r="56" fill="none" stroke="url(#aiGradient)" stroke-width="2" opacity="0.35"/>
+
+  <!-- Neural/circuit motif -->
+  <g stroke="url(#aiGradient)" stroke-width="3" fill="none" filter="url(#softGlow)">
+    <path d="M24 64 C24 40, 44 24, 64 24 C84 24, 104 40, 104 64 C104 88, 84 104, 64 104 C44 104, 24 88, 24 64 Z" opacity="0.25"/>
+    <path d="M44 48 C52 40, 76 40, 84 48" />
+    <path d="M44 80 C52 88, 76 88, 84 80" />
+    <path d="M40 64 H88" />
+    <path d="M64 40 V88" />
+  </g>
+
+  <!-- Nodes -->
+  <g fill="url(#aiGradient)">
+    <circle cx="40" cy="64" r="4"/>
+    <circle cx="64" cy="40" r="4"/>
+    <circle cx="88" cy="64" r="4"/>
+    <circle cx="64" cy="88" r="4"/>
+    <circle cx="84" cy="48" r="3"/>
+    <circle cx="44" cy="80" r="3"/>
+  </g>
+
+  <!-- IA letters -->
+  <g font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial" font-weight="800" font-size="28" text-anchor="middle" dominant-baseline="middle">
+    <text x="54" y="64" fill="#ffffff">I</text>
+    <text x="76" y="64" fill="#ffffff">A</text>
+  </g>
+</svg>

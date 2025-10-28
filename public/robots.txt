@@ -1,0 +1,33 @@
+User-agent: *
+Allow: /
+
+# Priorités importantes
+Allow: /niveaux-ia
+Allow: /types-ia
+Allow: /machine-learning
+Allow: /cas-usage
+Allow: /ethique
+Allow: /les-bases
+Allow: /ressources
+Allow: /cours/
+
+# Outils
+Allow: /calculateur-couts-ia
+Allow: /generateur-prompts
+Allow: /detecteur-contenu-ia
+Allow: /test-api-ia
+Allow: /simulateur-ia
+Allow: /comparateur-modeles-ia
+
+# Fichiers à exclure (si nécessaire)
+Disallow: /api/
+Disallow: /*.json$
+Disallow: /*?utm_*
+Disallow: /*?fb_*
+Disallow: /*?gclid=*
+
+# Sitemap
+Sitemap: https://exploronslia.app/sitemap.xml
+
+# Délai entre les requêtes (optionnel, pour éviter la surcharge)
+Crawl-delay: 1
